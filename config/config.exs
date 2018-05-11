@@ -2,6 +2,11 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+config :membermousey, membermouse_client_url: "test"
+config :membermousey, membermouse_client_key: "test"
+config :membermousey, membermouse_secret_key: "test"
+
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
