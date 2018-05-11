@@ -31,7 +31,7 @@ defmodule Membermousey.Mixfile do
         [
           files: ["lib", "mix.exs", "README*", "LICENSE*"],
           maintainers: ["Matt Eaton"],
-          licenses: ["New BSD"],
+          licenses: ["MIT"],
           links: %{
             "GitHub" => "https://github.com/fantypants/membermousey",
             "Docs" => "https://hexdocs.pm/mebermousey"
