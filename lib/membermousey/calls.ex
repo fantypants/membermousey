@@ -11,6 +11,11 @@ defmodule MemberMousey.Calls do
     ]
   end
 
+  def get_member(firstname, lastname) do
+    body = %{member: %{firstname: firstname, lastname: lastname}}
+    Membermousey.make_authorized_enquiry(:post, body, "default", "?q=/getMember") |> IO.inspect
+  end
+
 
 
 

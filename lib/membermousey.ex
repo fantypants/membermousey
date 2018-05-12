@@ -42,12 +42,10 @@ end
   end
 
 
-  def make_authorized_enquiry( body) do
-  #  rb =
-  MemberMousey.URI.encode_query(body)
-    #rh = req_headers(key)
-    #     |> Map.merge(headers)
-    #     |> Map.to_list
+  def make_authorized_enquiry(method, body, key, endpoint) do
+    rb = MemberMousey.URI.encode_query(body)
+    rh = req_headers(key)
+  
   end
 
   def req_headers(key) do

@@ -25,7 +25,7 @@ defmodule MembermouseyTest do
           lastname: "Jerry"
         }}
 
-    assert Membermousey.make_authorized_enquiry(member_data) == "firstname=Tom&lastname=Jerry"
+    assert Membermousey.make_authorized_enquiry(:post, member_data, "default", "?/member") == "firstname=Tom&lastname=Jerry"
   end
 
 

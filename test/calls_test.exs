@@ -8,4 +8,8 @@ defmodule CallsTest do
   test "another test " do
     assert 0==0
   end
+
+  test "Get Member" do
+    assert MemberMousey.Calls.get_member("Tom", "Jerry") == ""
+  end
 end
