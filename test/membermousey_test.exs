@@ -18,8 +18,14 @@ defmodule MembermouseyTest do
     assert Membermousey.process_url("/create") == "https://www.drewbairdfitness.com/wp-content/plugins/membermouse/api/request.php/create"
   end
 
+
   test "Make Auth Enquiry" do
-    assert Membermousey.make_authorized_enquiry([%{member: %{firstname: "Tom", lastname: "Jerry"}}]) == "firstname=Tom&lastname=Jerry" 
+    member_data = %{member: %{
+          firstname: "Tom",
+          lastname: "Jerry"
+        }}
+
+    assert Membermousey.make_authorized_enquiry(member_data) == "firstname=Tom&lastname=Jerry"
   end
 
 
