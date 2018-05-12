@@ -42,6 +42,20 @@ end
   end
 
 
+  def make_authorized_enquiry( body) do
+  #  rb =
+  MemberMousey.URI.encode_query(body)
+    #rh = req_headers(key)
+    #     |> Map.merge(headers)
+    #     |> Map.to_list
+  end
+
+  def req_headers(key) do
+    Map.new
+      |> Map.put("User-Agent",    "MemberMouse/v1 MemberMousey/0.0.1")
+      |> Map.put("Content-Type",  "application/x-www-form-urlencoded")
+  end
+
   defp require_membermouse_client_url do
     case Application.get_env(:membermousey, :membermouse_client_url, System.get_env "MEMBERMOUSE_CLIENT_URL") || :not_found do
       :not_found ->

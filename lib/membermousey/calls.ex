@@ -2,9 +2,8 @@ defmodule MemberMousey.Calls do
 
 
   def send_create(%{"body_params" => body_params}) do
-    #get API URL
-    apiUrl = "testapi"
-    apiCallUrl = "https://"<>apiUrl<> "?q=/createMember";
+    apiEndpoint = "?q=/createMember"
+    apiCallUrl = Membermousey.process_url(apiEndpoint)
     #Send Request
     HTTPotion.post apiCallUrl, [
       body: body_params,

@@ -11,10 +11,16 @@ defmodule MembermouseyTest do
   end
 
   test "Ensure Client Url" do
-    assert Membermousey.config_or_env_url()   == "test"
+    assert Membermousey.config_or_env_url()   == "www.drewbairdfitness.com/wp-content/plugins/membermouse/api/request.php"
   end
 
   test "process_url" do
-    assert Membermousey.process_url("/create") == "https://test/create"
+    assert Membermousey.process_url("/create") == "https://www.drewbairdfitness.com/wp-content/plugins/membermouse/api/request.php/create"
   end
+
+  test "Make Auth Enquiry" do
+    assert Membermousey.make_authorized_enquiry([%{member: %{firstname: "Tom", lastname: "Jerry"}}]) == "firstname=Tom&lastname=Jerry" 
+  end
+
+
 end

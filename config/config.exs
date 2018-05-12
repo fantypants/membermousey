@@ -2,7 +2,7 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :membermousey, membermouse_client_url: "test"
+config :membermousey, membermouse_client_url: "www.drewbairdfitness.com/wp-content/plugins/membermouse/api/request.php"
 config :membermousey, membermouse_client_key: "test"
 config :membermousey, membermouse_secret_key: "test"
 
